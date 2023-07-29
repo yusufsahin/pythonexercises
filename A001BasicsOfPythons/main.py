@@ -97,3 +97,92 @@ for i in range(5):
 
 for i in range(5):
     pass
+#define method
+def greet(name):
+    return (f"Hello world!,{name}")
+
+print(greet("Yusuf"))
+print(greet("Ece"))
+
+def topla(x,y):
+    return x+y
+
+k=int(input("k değerin giriniz : "))
+l=int(input("l değerini giriniz : "))
+
+print(topla(k,l))
+
+#dictionary
+studen_scores={"Alice":95,"Bob":90,"Charlie":75}
+print(studen_scores["Alice"])
+print(studen_scores["Charlie"])
+
+
+#try block
+try:
+    num=int(input("Enter a number: "))
+    result=10/num
+    print("Result : ",result)
+except ValueError:
+    print("Invalied input! Please enter a valid number")
+except ZeroDivisionError:
+    print("Cannot devide by zero")
+
+##file write
+
+with open("example.txt","w") as file:
+    file.write("Hello World!,File Write")
+
+#file read
+with open("example.txt","r") as file:
+    content=file.read()
+    print(content)
+
+#File write with exception
+
+try:
+    with open("output.txt","w") as file:
+        file.write("Hello world,this is a sample file")
+except IOError:
+    print("Error while writing to the file")
+except Exception as e:
+    print("An unexcepted error occured:" ,str(e))
+else:
+    print("File writing process completed successfully")
+
+try:
+    #open the file in read mode
+    with open("output.txt","r") as file:
+        content=file.read()
+
+    print("File content:")
+    print(content)
+
+except FileNotFoundError:
+    print("File not found")
+except IOError:
+    print("Error while reading file.")
+except Exception as e:
+    print("An unexcepted erro occured: "+ str(e))
+finally:
+    print("File reading process completed")
+
+
+    # Class
+
+    class Dog:
+        def __init__(self, name, age):
+            self.name = name
+            self.age = age
+
+        def bark(self):
+            print(f"{self.name} says 'Wolf!'")
+
+
+    # initiate
+    dog1 = Dog("Buddy", 2)
+    dog2 = Dog("Max", 4)
+
+    # call class method
+    dog1.bark()
+    dog2.bark()
