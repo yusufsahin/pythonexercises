@@ -170,19 +170,19 @@ finally:
 
     # Class
 
-    class Dog:
-        def __init__(self, name, age):
-            self.name = name
-            self.age = age
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-        def bark(self):
-            print(f"{self.name} says 'Wolf!'")
+    def bark(self):
+        print(f"{self.name} says 'Wolf!'")
 
 
     # initiate
-    dog1 = Dog("Buddy", 2)
-    dog2 = Dog("Max", 4)
+dog1 = Dog("Buddy", 2)
+dog2 = Dog("Max", 4)
 
     # call class method
-    dog1.bark()
-    dog2.bark()
+dog1.bark()
+dog2.bark()
